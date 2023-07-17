@@ -6,6 +6,7 @@
             <p class="m-0 mt-1">Nombre: {{item.name}}</p>
             <p class="m-0 mt-1">Genero: {{item.gender}}</p>
             <p class="m-0 mt-1">Especie: {{item.species}}</p>
+            <!-- Con ngClass clasificamos visualmente  -->
             <p class="m-0 mt-1" [ngClass]="{
                 'muerto': (item.status | lowercase) == 'dead',
                 'vivo': (item.status | lowercase) == 'alive',

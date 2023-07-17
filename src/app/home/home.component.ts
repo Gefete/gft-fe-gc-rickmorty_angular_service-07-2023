@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  mostrarBienvenida=true;
 
-
-  cambioHome(evento:any){
-    this.mostrarBienvenida=false;
-  }
 }

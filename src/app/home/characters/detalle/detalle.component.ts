@@ -10,14 +10,22 @@ import { RickmortyService } from 'src/app/rickmorty.service';
 export class DetalleComponent implements OnInit{
   id:string|null="";
   item:any;
-
+  
+  // Con ActivatedRoute podemos acceder a la información que se pasa desde URL
   constructor(private route:ActivatedRoute, private rickservice : RickmortyService){
 
   }
 
   ngOnInit(): void {
+    // Recoge el ID que se manda desde URL
     this.id = this.route.snapshot.paramMap.get('id');
+
+    // condicional para comprobar que no llega vacio el ID
     if (this.id!=""){
+      /* 
+      Llamamos un metodo del servicio, el cual devuelve solo 1 objeto 
+      se le pasa ID como argumento para agregarlo a la URL GET
+      */
       this.rickservice.getItem(this.id!)
         .subscribe(result => {
           console.warn(result);
