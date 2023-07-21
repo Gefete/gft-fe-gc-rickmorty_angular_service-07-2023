@@ -11,6 +11,7 @@ import { AboutComponent } from './home/about/about.component';
 import { DetalleComponent } from './home/characters/detalle/detalle.component';
 import { BienvenidaComponent } from './home/bienvenida/bienvenida.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './util/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     CharactersComponent,
     AboutComponent,
     DetalleComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

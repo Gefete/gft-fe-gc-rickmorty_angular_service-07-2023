@@ -11,21 +11,12 @@ import { BienvenidaComponent } from './home/bienvenida/bienvenida.component';
 
 const routes: Routes = [
   {path:"", redirectTo: '/home', pathMatch: 'full'},
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
-  
-  { path: 'home',  component: HomeComponent, 
-    children:[
-      {path: '', component: BienvenidaComponent},
-      {path: 'about', component: AboutComponent}, 
-      {path: 'characters', component: CharactersComponent, 
-        children:[
-          {path:'detalles/:id', component:DetalleComponent}
-        ]
-      }
-    ] 
-  }
-  
+  {path: 'register', component: RegisterComponent },
+  {path: 'login', component: LoginComponent },
+  {path: 'home', component: BienvenidaComponent},
+  {path: 'about', component: AboutComponent}, 
+  {path: 'characters', component: CharactersComponent},
+  {path: 'detalles/:id', component:DetalleComponent}
 ];
 
 @NgModule({
